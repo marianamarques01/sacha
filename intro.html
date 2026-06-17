@@ -16,7 +16,7 @@
     <a class="icon-btn" href="welcome.html" data-i18n-aria="intro.back" aria-label="Back">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
     </a>
-    <div style="display:flex;gap:10px;align-items:flex-start">
+    <div class="screen-top-actions">
       <span data-lang-toggle></span>
       <a class="icon-btn" href="index.html" data-i18n-aria="intro.menu" aria-label="Menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -24,65 +24,60 @@
     </div>
   </div>
 
-  <img class="drift-feather" src="assets/feather.png" alt="" style="left:8%;top:30%">
-  <img class="drift-feather" src="assets/feather.png" alt="" style="left:90%;top:40%;animation-delay:-3.4s">
-  <img class="drift-feather" src="assets/feather.png" alt="" style="left:12%;top:80%;animation-delay:-5s">
-  <span class="sparkle" style="left:20%;top:16%">✦</span>
-  <span class="sparkle" style="left:78%;top:14%;animation-delay:-1.6s">✦</span>
-  <span class="sparkle" style="left:86%;top:74%;animation-delay:-2.6s">✦</span>
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:6%;top:22%;opacity:.1">
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:92%;top:28%;animation-delay:-3.4s;opacity:.1">
+  <span class="sparkle" style="left:18%;top:12%">✦</span>
+  <span class="sparkle" style="left:82%;top:10%;animation-delay:-1.6s">✦</span>
 
   <main class="intro-stage">
-    <img class="logo-big" src="assets/logo.png" alt="SACHA">
-    <p class="name-sub">Safe AI-Chatbot Highly Anthropomorphized</p>
-    <p class="name-tag" data-i18n="intro.tagline">A wise companion for safe AI use</p>
-
-    <p class="journey" data-i18n="intro.journey">An interactive journey through the mind of Artificial Intelligence.</p>
+    <header class="intro-hero">
+      <img class="logo-big" src="assets/logo.png" alt="SACHA">
+      <p class="name-sub">Safe AI-Chatbot Highly Anthropomorphized</p>
+      <p class="name-tag" data-i18n="intro.tagline">A wise companion for safe AI use</p>
+      <div class="intro-ornament">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 8 4 10 2 11c2 1 6 3 10 11 4-8 8-10 10-11-2-1-6-3-10-9z"/></svg>
+      </div>
+      <p class="journey" data-i18n="intro.journey">An interactive journey through the mind of Artificial Intelligence.</p>
+    </header>
 
     <div class="feature-list">
       <article class="feature">
         <div class="ic">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.5-.7L3 21l1.8-4.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
         </div>
-        <div>
-          <h3 data-i18n="intro.f1.title">Interactive Dialogue</h3>
-          <p data-i18n="intro.f1.desc">Chat with SACHA about Artificial Intelligence.</p>
-        </div>
+        <h3 data-i18n="intro.f1.title">Interactive Dialogue</h3>
+        <p data-i18n="intro.f1.desc">Chat with SACHA about Artificial Intelligence.</p>
       </article>
       <article class="feature">
         <div class="ic">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
         </div>
-        <div>
-          <h3 data-i18n="intro.f2.title">Explore Concepts</h3>
-          <p data-i18n="intro.f2.desc">Discover key AI ideas through curated content and examples.</p>
-        </div>
+        <h3 data-i18n="intro.f2.title">Explore Concepts</h3>
+        <p data-i18n="intro.f2.desc">Discover key AI ideas through curated content and examples.</p>
       </article>
       <article class="feature">
         <div class="ic">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5V5a2 2 0 1 1 4 0v5.5"/><path d="M13 10a2 2 0 1 1 4 0v3a7 7 0 0 1-7 7h-.6a7 7 0 0 1-5.4-2.5L2.6 15a1.8 1.8 0 0 1 2.8-2.3L7 14.5V7"/></svg>
         </div>
-        <div>
-          <h3 data-i18n="intro.f3.title">Interactive Experiences</h3>
-          <p data-i18n="intro.f3.desc">Engage with AI in guided conversations and dynamic in-app activities.</p>
-        </div>
+        <h3 data-i18n="intro.f3.title">Interactive Experiences</h3>
+        <p data-i18n="intro.f3.desc">Engage with AI in guided conversations and dynamic in-app activities.</p>
       </article>
     </div>
 
-    <div class="btn-row">
-      <a class="btn btn-red" style="padding:18px 60px;font-size:16px" href="chat.html" data-i18n="intro.start" data-i18n-wing>
+    <footer class="intro-foot">
+      <a class="btn btn-red intro-start-btn" href="chat.html" data-i18n="intro.start" data-i18n-wing>
         <span class="wing">❧</span> Start now <span class="wing">❧</span>
       </a>
-    </div>
-
-    <div class="support-strip">
-      <p class="lbl" data-i18n="intro.support">A project supported by</p>
-      <div class="badges">
-        <div class="badge badge-logo"><img src="assets/logo-confap.png" alt="CONFAP"></div>
-        <div class="badge badge-logo"><img src="assets/logo-ifes.png" alt="Instituto Federal do Espírito Santo — Campus Vitória"></div>
-        <div class="badge badge-logo"><img src="assets/logo-uclouvain.png" alt="UCLouvain"></div>
-        <div class="badge badge-logo"><img src="assets/logo-wbi.png" alt="Wallonie-Bruxelles International"></div>
+      <div class="support-strip">
+        <p class="lbl" data-i18n="intro.support">A project supported by</p>
+        <div class="badges">
+          <div class="badge badge-logo"><img src="assets/logo-confap.png" alt="CONFAP"></div>
+          <div class="badge badge-logo"><img src="assets/logo-ifes.png" alt="Instituto Federal do Espírito Santo — Campus Vitória"></div>
+          <div class="badge badge-logo"><img src="assets/logo-uclouvain.png" alt="UCLouvain"></div>
+          <div class="badge badge-logo"><img src="assets/logo-wbi.png" alt="Wallonie-Bruxelles International"></div>
+        </div>
       </div>
-    </div>
+    </footer>
   </main>
 </div>
 

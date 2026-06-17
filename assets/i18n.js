@@ -11,8 +11,8 @@
       'page.intro.title': 'Introduction · SACHA',
       'page.chat.title': 'Chat with SACHA',
       'meta.home.description': 'SACHA is an educational chatbot: an interactive journey through the mind of Artificial Intelligence.',
-      'lang.toPt': 'PT',
-      'lang.toEn': 'EN',
+      'lang.ariaToPt': 'Switch to Portuguese',
+      'lang.ariaToEn': 'Switch to English',
       'nav.home': 'SACHA — home',
       'nav.features': 'Features',
       'nav.about': 'About',
@@ -117,8 +117,8 @@
       'page.intro.title': 'Introdução · SACHA',
       'page.chat.title': 'Chat com a SACHA',
       'meta.home.description': 'SACHA é um chatbot educativo: uma jornada interativa pela mente da Inteligência Artificial.',
-      'lang.toPt': 'PT',
-      'lang.toEn': 'EN',
+      'lang.ariaToPt': 'Mudar para português',
+      'lang.ariaToEn': 'Mudar para inglês',
       'nav.home': 'SACHA — início',
       'nav.features': 'Recursos',
       'nav.about': 'Sobre',
@@ -277,6 +277,8 @@
     return T[lang][key] ?? T.en[key] ?? key;
   }
 
+  const LANG_ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>';
+
   function getLang(){ return lang; }
 
   function setLang(next){
@@ -330,8 +332,7 @@
     });
 
     document.querySelectorAll('.lang-toggle').forEach(btn=>{
-      btn.textContent = lang === 'en' ? t('lang.toPt') : t('lang.toEn');
-      btn.setAttribute('aria-label', lang === 'en' ? 'Switch to Portuguese' : 'Switch to English');
+      btn.setAttribute('aria-label', lang === 'en' ? t('lang.ariaToPt') : t('lang.ariaToEn'));
     });
 
     if(typeof window.onSachaLangApply === 'function') window.onSachaLangApply(lang);
@@ -341,7 +342,8 @@
     if(!parent || parent.querySelector('.lang-toggle')) return;
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'lang-toggle';
+    btn.className = 'icon-btn lang-toggle';
+    btn.innerHTML = LANG_ICON;
     btn.addEventListener('click', toggleLang);
     parent.appendChild(btn);
   }
