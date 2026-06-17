@@ -336,7 +336,11 @@ button.icon-btn{font:inherit;padding:0;cursor:pointer}
   background:var(--paper);border:1px solid rgba(201,163,92,.45);border-radius:26px;
   box-shadow:var(--shadow);padding:46px clamp(26px,6vw,70px) 44px;text-align:center;
 }
-.welcome-card h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.4vw,44px);color:var(--green-dark)}
+.welcome-card h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(22px,3.6vw,44px);color:var(--green-dark);
+  white-space:nowrap;
+}
 .welcome-card h1 em{font-style:normal;color:var(--red)}
 .welcome-card .ornament{margin:20px 0 26px}
 .welcome-card p{font-size:17px;line-height:1.75;color:var(--brown-soft)}
