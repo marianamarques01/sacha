@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome · SACHA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" type="image/png" href="assets/avatar.png">
+</head>
+<body class="paper-bg" data-page="welcome">
+
+<div class="screen">
+  <div class="screen-top">
+    <div style="display:flex;align-items:flex-start;gap:18px">
+      <a class="icon-btn" href="login.html" data-i18n-aria="welcome.back" aria-label="Back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </a>
+      <div>
+        <a class="brand" href="index.html">
+          <img class="word" src="assets/logo.png" alt="SACHA" style="height:40px">
+          <img class="quill" src="assets/feather.png" alt="" style="height:46px">
+        </a>
+        <p class="brand-sub">Safe AI-Chatbot Highly Anthropomorphized</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start">
+      <span data-lang-toggle></span>
+      <a class="icon-btn" href="index.html" data-i18n-aria="welcome.menu" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:9%;top:34%">
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:88%;top:22%;animation-delay:-4s">
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:14%;top:78%;animation-delay:-2s">
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:83%;top:66%;animation-delay:-6.5s">
+  <span class="sparkle" style="left:22%;top:22%">✦</span>
+  <span class="sparkle" style="left:76%;top:38%;animation-delay:-1.4s">✦</span>
+  <span class="sparkle" style="left:30%;top:62%;animation-delay:-2.2s">✦</span>
+  <span class="sparkle" style="left:68%;top:82%;animation-delay:-.8s">✦</span>
+
+  <main class="welcome-stage">
+    <div class="welcome-art">
+      <img src="assets/mascot.png" data-i18n-alt="welcome.alt" alt="SACHA mascot reading a book">
+    </div>
+
+    <section class="welcome-card">
+      <h1 data-i18n-html="welcome.title">Welcome to <em>SACHA</em>!</h1>
+      <div class="ornament">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 8 4 10 2 11c2 1 6 3 10 11 4-8 8-10 10-11-2-1-6-3-10-9z"/></svg>
+      </div>
+      <p data-i18n="welcome.body">
+        Here, you will discover how AI works through statistical and probabilistic models, explore the idea of Artificial Intelligence as a metaphor, and critically examine the most common perceptions about chatbots. This introduction will gently guide you through your learning journey.
+      </p>
+      <p class="enjoy" data-i18n="welcome.enjoy">Enjoy the exploration!</p>
+    </section>
+
+    <div class="btn-row">
+      <a class="btn btn-red" href="intro.html" style="padding:18px 64px;font-size:16px" data-i18n="welcome.start" data-i18n-wing>
+        <span class="wing">❧</span> Get started <span class="wing">❧</span>
+      </a>
+    </div>
+  </main>
+</div>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

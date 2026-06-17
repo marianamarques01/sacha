@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in · SACHA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" type="image/png" href="assets/avatar.png">
+</head>
+<body class="paper-bg" data-page="login">
+
+<main class="auth-wrap">
+  <a class="icon-btn" href="index.html" data-i18n-aria="auth.back" aria-label="Back to home" style="position:absolute;top:26px;left:26px;z-index:5">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </a>
+  <div data-lang-toggle></div>
+
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:12%;top:18%">
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:84%;top:26%;animation-delay:-3s">
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:18%;top:74%;animation-delay:-6s">
+  <img class="drift-feather" src="assets/feather.png" alt="" style="left:80%;top:70%;animation-delay:-1.5s">
+  <span class="sparkle" style="left:28%;top:30%">✦</span>
+  <span class="sparkle" style="left:70%;top:16%;animation-delay:-1.2s">✦</span>
+  <span class="sparkle" style="left:64%;top:80%;animation-delay:-2.4s">✦</span>
+
+  <section class="auth-card">
+    <img class="auth-avatar" src="assets/avatar.png" alt="SACHA avatar">
+    <h1 id="authTitle" data-i18n-html="auth.titleLogin">Good to see you <em>here</em>!</h1>
+    <p class="sub" id="authSub" data-i18n="auth.subLogin">Sign in to continue your journey with SACHA.</p>
+
+    <div class="tabs" role="tablist" data-i18n-aria="auth.tabs" aria-label="Sign in or create account">
+      <button id="tabLogin" role="tab" aria-selected="true" aria-controls="formLogin" data-i18n="auth.tabLogin">Sign in</button>
+      <button id="tabSignup" role="tab" aria-selected="false" aria-controls="formSignup" data-i18n="auth.tabSignup">Create account</button>
+    </div>
+
+    <form id="formLogin" novalidate>
+      <div class="field">
+        <label for="lEmail" data-i18n="auth.email">Email</label>
+        <input id="lEmail" type="email" data-i18n-placeholder="auth.emailPh" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="lPass" data-i18n="auth.password">Password</label>
+        <input id="lPass" type="password" data-i18n-placeholder="auth.passPh" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <button class="btn btn-red" type="submit" data-i18n="auth.submitLogin" data-i18n-wing><span class="wing">❧</span> Sign in <span class="wing">❧</span></button>
+      <p class="auth-foot" data-i18n-html="auth.forgot">Forgot your password? <a href="#" data-i18n-forgot-link>Recover access</a></p>
+    </form>
+
+    <form id="formSignup" class="hidden" novalidate>
+      <div class="field">
+        <label for="sName" data-i18n="auth.name">Name</label>
+        <input id="sName" type="text" data-i18n-placeholder="auth.namePh" placeholder="What should we call you?" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="sEmail" data-i18n="auth.email">Email</label>
+        <input id="sEmail" type="email" data-i18n-placeholder="auth.emailPh" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="sPass" data-i18n="auth.password">Password</label>
+        <input id="sPass" type="password" data-i18n-placeholder="auth.passNewPh" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+      </div>
+      <button class="btn btn-green" type="submit" data-i18n="auth.submitSignup" data-i18n-wing><span class="wing">❧</span> Create account <span class="wing">❧</span></button>
+      <p class="auth-foot" data-i18n="auth.terms">By continuing, you agree to explore AI with curiosity and critical thinking. ✦</p>
+    </form>
+  </section>
+</main>
+
+<div id="toast" role="status"></div>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+<script>initAuthTabs();</script>
+</body>
+</html>
